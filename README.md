@@ -136,7 +136,13 @@ go-koans/
 - 🔸 Go tiene **punteros explícitos**, Python tiene todo por referencia
 - 🔸 Goroutines son **más ligeras** que threads de Python
 
-## Comandos útiles
+## 📖 Documentación Adicional
+
+- **[COMO_FUNCIONA.md](COMO_FUNCIONA.md)** - Explicación detallada de la metodología de koans
+- **[GUIA.md](GUIA.md)** - Tutorial paso a paso con ejemplos
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Cómo contribuir al proyecto
+
+## 🛠️ Comandos Útiles
 
 ```bash
 # Ejecutar todos los tests
