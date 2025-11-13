@@ -162,6 +162,7 @@ defer func() { resultado = "final" }()
    - Revisa el error del test
    - Prueba en un playground de Go
    - Consulta la documentación oficial de Go
+   - Como último recurso, consulta [SOLUCIONES.md](SOLUCIONES.md) (pero intenta al menos 30 minutos primero)
 
 ## Verificar tu Progreso
 

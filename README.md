@@ -140,6 +140,7 @@ go-koans/
 
 - **[COMO_FUNCIONA.md](COMO_FUNCIONA.md)** - Explicación detallada de la metodología de koans
 - **[GUIA.md](GUIA.md)** - Tutorial paso a paso con ejemplos
+- **[SOLUCIONES.md](SOLUCIONES.md)** - ⚠️ Soluciones completas (úsalo solo después de intentarlo)
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - Cómo contribuir al proyecto
 
 ## 🛠️ Comandos Útiles
