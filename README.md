@@ -14,9 +14,14 @@ Los Koans son ejercicios de programación que siguen el ciclo TDD:
 🔴 Red → 🟢 Green → 🔵 Refactor
 ```
 
-1. **🔴 Red**: Un test falla (punto de partida)
-2. **🟢 Green**: Escribes el código mínimo para que pase
-3. **🔵 Refactor**: Mejoras el código manteniendo los tests verdes
+**🎓 Filosofía de Aprendizaje:**
+- ❌ **NO** te damos las soluciones directamente
+- ✅ Te damos **tests** que describen el comportamiento esperado
+- ✅ Te damos **pistas y hints** sobre cómo resolverlo en Go
+- ✅ Te mostramos **comparaciones con Python** para facilitar la comprensión
+- ✅ Tú **implementas** la solución siguiendo los TODOs
+
+**Este es un viaje de descubrimiento, no de copiar y pegar.** 🚀
 
 ## 🎯 ¿Para quién es esto?
 
@@ -34,60 +39,102 @@ Los Koans son ejercicios de programación que siguen el ciclo TDD:
 
 ## 🚀 Inicio Rápido
 
-1. **Ejecuta todos los tests** para ver los fallos:
+## 🚀 Inicio Rápido
+
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/jjmmolina/go-koans-python-devs.git
+   cd go-koans-python-devs
+   ```
+
+2. **Ejecuta todos los tests** para ver cuántos fallan:
    ```bash
    go test ./...
    ```
+   Verás muchos tests rojos 🔴 - ¡esto es lo esperado!
 
-2. **Empieza con el primer koan**:
+3. **Empieza con el primer koan**:
    ```bash
-   go test ./01_about_variables -v
+   cd 01_about_variables
+   go test -v
    ```
 
-3. **Edita** `01_about_variables/variables.go` y reemplaza `"__FILL_ME__"` con los valores correctos
+4. **Abre** `variables.go` y busca los TODOs:
+   - Lee las comparaciones con Python
+   - Sigue las pistas en los comentarios
+   - Reemplaza `"__FILL_ME__"` y valores `0`, `false` por las soluciones correctas
 
-4. **Re-ejecuta** hasta que los tests pasen, luego continúa con el siguiente
-
-5. **Lee la [GUIA.md](GUIA.md)** para consejos detallados y ejemplos
-
-## Cómo empezar
-
-1. Ejecuta todos los tests para ver los fallos:
+5. **Ejecuta el test** hasta que pase 🟢:
    ```bash
-   go test ./...
+   go test -v
    ```
 
-2. Ve al primer koan (`01_about_variables`) y ejecuta sus tests:
-   ```bash
-   go test ./01_about_variables
-   ```
+6. **Repite** con cada koan siguiendo el orden numérico
 
-3. Edita el archivo para hacer que el primer test pase
-4. Continúa con el siguiente test que falle
-5. Repite hasta completar todos los koans
+7. **Lee la [GUIA.md](GUIA.md)** para un ejemplo paso a paso completo
 
-## Estructura del proyecto
+## 📖 Cómo Usar los Koans
+
+Cada archivo `.go` contiene:
+
+```go
+// PASO 1: Explicación del concepto
+// En Python: ejemplo_python()
+// En Go: ejemplo_go()
+
+// TODO: Descripción clara de qué hacer
+func MiFuncion() string {
+    return "__FILL_ME__"  // ← Reemplaza esto
+}
+```
+
+**Tu trabajo:**
+1. Lee el comentario de comparación Python/Go
+2. Lee el TODO
+3. Consulta los hints si los hay
+4. Implementa la solución
+5. Ejecuta `go test` para verificar
+
+**NO mires las soluciones en internet hasta que lo intentes primero!** 💪
+
+## 📚 Estructura del Proyecto
 
 ```
 go-koans/
-├── 01_about_variables/      # Variables y tipos básicos ✅
-├── 02_about_functions/      # Funciones y parámetros ✅
-├── 03_about_structs/        # Estructuras y métodos ✅
-├── 04_about_interfaces/     # Interfaces y polimorfismo ✅
-├── 05_about_pointers/       # Punteros y gestión de memoria ✅
-├── 06_about_errors/         # Manejo de errores ✅
-├── 07_about_goroutines/     # Concurrencia con goroutines ✅
-├── 08_about_channels/       # Comunicación con channels ✅
-└── 09_about_packages/       # Paquetes y módulos ✅
+├── 01_about_variables/      # Variables, tipos, constantes, conversiones
+│   ├── variables.go         # ← Edita este archivo
+│   └── variables_test.go    # ← Los tests que deben pasar
+├── 02_about_functions/      # Funciones, parámetros, closures, errores
+├── 03_about_structs/        # Structs, métodos, composición
+├── 04_about_interfaces/     # Interfaces, duck typing, type assertions
+├── 05_about_pointers/       # Punteros, referencias, memoria
+├── 06_about_errors/         # Manejo de errores, panic/recover
+├── 07_about_goroutines/     # Concurrencia, WaitGroups, Mutex
+├── 08_about_channels/       # Channels, select, patrones de concurrencia
+└── 09_about_packages/       # Organización, exports, imports
 ```
 
-## Consejos para desarrolladores Python
+**Orden recomendado:** Sigue el orden numérico (01 → 09) ya que cada koan construye sobre los anteriores.
 
-- En Go no hay clases, usa `structs` e `interfaces`
-- Go es tipado estáticamente, declara tipos explícitamente
-- Go maneja memoria automáticamente, pero puedes usar punteros
-- Las goroutines son como async/await pero más poderosas
-- Los channels son como las queues de Python pero integradas en el lenguaje
+## 💡 Consejos para Desarrolladores Python
+
+| Concepto | Python | Go |
+|----------|--------|-----|
+| **Clases** | `class Person:` | `type Person struct {}` |
+| **Métodos** | `def method(self):` | `func (p Person) Method() {}` |
+| **Herencia** | `class Child(Parent):` | Composición con embedding |
+| **Excepciones** | `try/except` | Retornar `error` como segundo valor |
+| **Async** | `async/await` | `goroutines` y `channels` |
+| **None** | `None` | `nil` |
+| **Duck Typing** | Implícito | Interfaces explícitas |
+| **List** | `[1, 2, 3]` | `[]int{1, 2, 3}` (slices) |
+
+**Diferencias clave:**
+- 🔸 Go es **tipado estáticamente**: debes declarar tipos
+- 🔸 Go no tiene **clases**, usa structs + métodos
+- 🔸 Go maneja **errores como valores**, no excepciones
+- 🔸 Go tiene **punteros explícitos**, Python tiene todo por referencia
+- 🔸 Goroutines son **más ligeras** que threads de Python
 
 ## Comandos útiles
 

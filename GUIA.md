@@ -1,52 +1,100 @@
-# Guía de Resolución - Go Koans
+# Guía de Resolución - Go Koans 📖
 
-Esta guía te ayudará a empezar con los Go Koans. Recuerda: ¡el objetivo es aprender paso a paso!
+Esta guía te ayudará a navegar por los Go Koans. **Recuerda:** el objetivo es que **TÚ** implementes las soluciones, no copiarlas.
+
+## 🎯 Filosofía de Aprendizaje
+
+**Estos koans NO contienen las soluciones.** En su lugar encontrarás:
+- ✅ Explicaciones de **cómo funciona Go** comparado con Python
+- ✅ **Hints y pistas** sobre qué hacer
+- ✅ **TODOs claros** que indican qué implementar
+- ✅ **Tests** que describen el comportamiento esperado
+
+**Tu trabajo es llenar los espacios en blanco** usando las pistas provistas.
 
 ## 🚀 Orden Recomendado
 
 Completa los koans en este orden para una curva de aprendizaje óptima:
 
-1. **01_about_variables** - Fundamentos básicos
-2. **02_about_functions** - Funciones y métodos  
+1. **01_about_variables** - Fundamentos: tipos, declaraciones, constantes
+2. **02_about_functions** - Funciones, parámetros, retornos múltiples  
 3. **03_about_structs** - Estructuras (las "clases" de Go)
 4. **04_about_interfaces** - Polimorfismo en Go
-5. **05_about_pointers** - Gestión de memoria
-6. **06_about_errors** - Manejo de errores (muy importante!)
-7. **07_about_goroutines** - Concurrencia básica
+5. **05_about_pointers** - Gestión de memoria y referencias
+6. **06_about_errors** - Manejo de errores (muy importante en Go!)
+7. **07_about_goroutines** - Concurrencia con goroutines
 8. **08_about_channels** - Comunicación entre goroutines
-9. **09_about_packages** - Organización de código
+9. **09_about_packages** - Organización y exports
 
-## 🔥 Cómo Empezar (Ejemplo Práctico)
+## 🔥 Ejemplo Práctico Paso a Paso
 
-### Paso 1: Ve al primer koan
+### Paso 1: Navega al primer koan
 ```bash
 cd 01_about_variables
 ```
 
-### Paso 2: Ejecuta los tests para ver qué falla
+### Paso 2: Ejecuta los tests para ver qué falla (esto es esperado!)
 ```bash
 go test -v
 ```
 
-### Paso 3: Abre `variables.go` y busca los TODOs
-Verás líneas como:
-```go
-// TODO: Declara una variable string llamada 'saludo' con valor "Hola Go"
-saludo = "__FILL_ME__"
+Verás output como:
+```
+--- FAIL: TestVariables (0.00s)
+    variables_test.go:12: Expected "Hola Go", got "__FILL_ME__"
 ```
 
-### Paso 4: Reemplaza `"__FILL_ME__"` y `0` con los valores correctos
+### Paso 3: Abre `variables.go` y lee el contexto
+Verás código como:
 ```go
-saludo = "Hola Go"  // ✅ Correcto
+// PASO 1: Arregla las declaraciones de variables
+// En Python: nombre = "Juan"
+// En Go: var nombre string = "Juan" o nombre := "Juan"
+
+var (
+	// TODO: Declara una variable string llamada 'saludo' con valor "Hola Go"
+	saludo = "__FILL_ME__"
 ```
 
-### Paso 5: Ejecuta los tests nuevamente
+### Paso 4: Analiza qué hacer
+1. Lee el comentario de comparación Python/Go
+2. Lee el TODO
+3. Entiende qué se pide: una variable string con valor "Hola Go"
+4. En Go, puedes hacer: `saludo = "Hola Go"`
+
+### Paso 5: Implementa la solución
+```go
+var (
+	// TODO: Declara una variable string llamada 'saludo' con valor "Hola Go"
+	saludo = "Hola Go"  // ← Reemplazaste __FILL_ME__
+```
+
+### Paso 6: Ejecuta los tests nuevamente
 ```bash
 go test -v
 ```
 
-### Paso 6: Continúa hasta que todos los tests pasen
-¡Luego pasa al siguiente koan!
+Si pasa 🟢:
+```
+--- PASS: TestVariables (0.00s)
+```
+
+### Paso 7: Continúa con el siguiente TODO
+Repite el proceso hasta que todos los tests del koan pasen.
+
+### Paso 8: Pasa al siguiente koan
+```bash
+cd ../02_about_functions
+go test -v
+```
+
+## ⚠️ Reglas Importantes
+
+1. **NO busques soluciones en internet** hasta que lo hayas intentado
+2. **Lee los comentarios** - contienen toda la información necesaria
+3. **Usa los hints** - están ahí para ayudarte
+4. **Los tests son tu guía** - describen exactamente qué debe hacer el código
+5. **Experimenta** - no pasa nada si te equivocas, los tests te dirán qué está mal
 
 ## 💡 Consejos para Desarrolladores Python
 

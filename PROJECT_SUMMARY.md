@@ -1,7 +1,23 @@
 # Resumen del Proyecto Go Koans
 
 ## 🎯 Objetivo
-Crear un tutorial interactivo completo para que desarrolladores Python aprendan Go mediante Test-Driven Development (TDD).
+Crear un tutorial interactivo completo para que desarrolladores Python aprendan Go mediante Test-Driven Development (TDD) **sin mostrar soluciones directamente**.
+
+## 🧠 Filosofía Pedagógica
+
+**Aprender haciendo, no copiando:**
+- ❌ NO se proporcionan soluciones en el código
+- ✅ Se dan explicaciones claras de cómo funciona Go
+- ✅ Se incluyen comparaciones directas con Python
+- ✅ Se proporcionan hints y pistas en comentarios
+- ✅ Los tests describen el comportamiento esperado
+- ✅ El estudiante implementa las soluciones guiado por TODOs
+
+**Patrón Koan tradicional:**
+- Código incompleto con TODOs claros
+- Tests que fallan inicialmente
+- Estudiante completa el código hasta que los tests pasen
+- Aprendizaje progresivo y autoguiado
 
 ## 📊 Estadísticas del Proyecto
 
